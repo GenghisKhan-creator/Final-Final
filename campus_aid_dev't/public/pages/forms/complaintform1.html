@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="../../styles/complaintform1.css">
+</head>
+<body>
+    <div class="parent">
+    <button type="button" class="backBTN" onclick="window.history.back()">Back</button>
+        <div class="container">
+            <h1 class="complaint">COMPLAINT FORM</h1>
+
+            <!-- add route here -->
+            <form action="/api/complaint" method="post">
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Surname">full name</label>
+                        <input type="text" id="Surname" placeholder="Enter Surname" required name="fullName">
+                    </div>
+                </div>
+        
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Registration No">Registration No:</label>
+                        <input type="text" id="Registration No" placeholder="Enter Registration Number" name="registrationNumber" required>
+                    </div>
+                </div>
+
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Program">Program</label>
+                        <input type="text" id="Program" placeholder="Enter Your Program(eg. Accounting, BKF, HRM, AGR.BUS)" name="program" required>
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Level">Level:</label>
+                        <input type="number" id="Level" name="level" placeholder="Enter Your Level" required>
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Tel">Tel:</label>
+                        <input type="number" id="tel" placeholder="Enter Telephone" required name="telephone">
+                    </div>
+                </div>
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="department">Department:</label>
+                        <input type="text" id="NOD" placeholder="Department Name" required name="department">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="faculty">Faculty:</label>
+                        <input type="text" id="Faculty" placeholder="Faculty Name" required name="faculty">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Course Code">Course Code:</label>
+                        <input type="text" id="Course Code" placeholder="Enter Course Code" required name="code">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Course Title">Course Title:</label>
+                        <input type="text" id="Title" placeholder="Enter Course Title" required name="course">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Lecturer">Lecturer:</label>
+                        <input type="text" id="Lecturer" placeholder="Name of lecturer" required name="lecturer">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Year">Year:</label>
+                        <input type="text" id="paper" placeholder="Year paper was taken" required name="year">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="department">Semester:</label>
+                        <input type="text" id="NOD" placeholder="Semester paper was taken" required name="semester">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="Semester">Session:</label>
+                        <input type="text" id="Semester" name="session" placeholder="Semester paper was taken" required/>
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="grade">Grade (If any):</label>
+                        <input type="text" id="grade" name="grade" placeholder="Enter Grade(If Any) ">
+                    </div>
+                </div>
+
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="department">Nature:</label>
+                        <textarea  id="Message" rows="10" placeholder="Nature Of Complaint" required name="complaint"></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">SUBMIT<button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

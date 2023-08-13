@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/ResitForm.css">
+    <title>Resit</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="Change">Resit</h1>
+        
+        <form action="/api/add" method="POST">
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Student ID">Student ID</label>
+                    <input type="text" id="Student ID" name="studentId" placeholder="Enter your Registration Number">
+                </div>
+            </div>
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Name">Student Name</label>
+                    <input type="text" id="name" name="studentName" placeholder="Enter your Full Name">
+                </div>
+            </div>
+            
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Semester">Current Semester</label>
+                    <input type="text" id="Semester" name="currentSemester" placeholder="Enter Current Semester" >
+                </div>
+            </div>
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Programme">Current Programme</label>
+                    <input type="text" id="" name="currentProgramme" placeholder="Enter your Current Programme" >
+                </div>
+            </div>
+
+            <div class="main-user-info">
+                <div class="user-input-box"> 
+                    <label for="level">Level</label>
+                    <input type="number" id="" name="level" placeholder="Enter your Level" >
+                </div>
+            </div>
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Request">Programme Requested For</label>
+                    <input type="text" id="" name="programmeRequested" placeholder="Enter Programme Requested For" >
+                </div>
+            </div>
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="department">Reason</label>
+                    <textarea name="reason" id="Message" rows="10" placeholder="Breifly state reason(s) for request" ></textarea>
+                    </div>
+                </div> 
+
+            <!-- <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Date">Date:</label>
+                    <input type="date" id="date" required name="Date" required>
+                </div>
+            </div> -->
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Tel">Tel:</label>
+                    <input type="number" id="tel" placeholder="Enter Telephone"  name="telephone">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">SUBMIT</button>
+
+        </form>
+    </div>
+</body>
+</html>

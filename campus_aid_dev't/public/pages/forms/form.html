@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Programme</title>
+</head>
+<body>
+    <form action="/api" method="post">
+        <!-- student Id -->
+        <div class="form-control">
+            <label for="stu_id" class="stu_id">Student Id:</label>
+            <input type="text" name="Student_id" id="stu_id">
+        </div>
+
+        <!-- student name -->
+        <div class="form-control">
+            <label for="name" class="name">Student Name:</label>
+            <input type="text" name ='name' id="name">
+        </div>
+
+        <!-- current semester -->
+        <div class="form-control">
+            <label for="cur_semester" class="labels">Current Semester:</label>
+            <input type="text" name ='current_semester' id="cur_semester">
+        </div>
+        
+        <!-- Current Programme -->
+        <div class="form-control">
+            <label for="cur_programme" class="labels">Current Programme:</label>
+            <input type="text" name ='cur_programme' id="cur_programme">
+        </div>
+
+        <!-- level -->
+        <div class="form-control">
+            <label for="level" class="labels">Level:</label>
+            <input type="text" name ='level' id="level">
+        </div>
+
+        <!-- Programme Requested For -->
+        <div class="form-control">
+            <label for="Programme_change" class="labels">Programme Requested For:</label>
+            <input type="text" name ='Programme_change' id="Programme_change">
+        </div>
+
+        <div class="form-control">
+            <label for="name" class="labels">Reason:</label>
+            <textarea name="reason" id="reason" cols="30" rows="10"></textarea>
+        </div>
+
+        <!-- tel -->
+        <div class="form-control">
+            <label for="tel" class="telephone">Phone Number:</label>
+            <input type="tel" name ='telephone' id="tel">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(17, 17, 57);
+    background: linear-gradient(156deg, rgba(17, 17, 57, 1) 38%, rgba(2, 0, 36, 1) 47%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+.container {
+    width: 400px;
+    box-shadow: 0 0 4px grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+label {
+    color: whitesmoke
+}

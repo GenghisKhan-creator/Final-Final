@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Campus Aid</title>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles/gdawg.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url('./sources/imgs/danilo-rios-bj5y_XuSm58-unsplash.jpg') fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+
+.container-fluid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 999999;
+}
+
+.container-fluid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+}
+
+.container-fluid:hover::before {
+    left: 100%;
+}
+ /* card */
+.paulinaContainer{
+    display: grid;
+    position: relative;
+    align-items: center;
+    padding: 20px 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+/*.paulinaContainer*/ .cards {
+    display: grid;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba( 255, 255, 255, 0.5);
+    border-left: 1px solid rgba( 255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.cards .specifics {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.cards:hover .specifics {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.cards .specifics h3 {
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    font-size: 3em;
+    color: rgba( 255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.cards .specifics p {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+    /* .cards {
+    border-radius: 20px;
+    margin: 20px 10px;
+    /* width:380px; 
+    transition: 0.3s;
+    box-shadow: 2px 0 6px 0 rgba(0,0,0,0.2);
+    }
+    .cards a{
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+}
+.cards:hover {
+    box-shadow: 0 8px 12px 0 rgba(255, 251, 251, 0.967);
+} */
+/* .specifics {
+    padding: 30px 30px;
+    text-align: center;
+} */
+img {
+    border-radius: 5px 5px 0 0;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+@media screen and (max-width: 768px) {
+  .paulinacontainer {
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
+/* end of card */
+/* navbar */
+.navbar-brand{
+    color: #fff;
+    font-size: 2em;
+}
+.nav-link{
+    color: #fff;
+}
+/* .nav-link a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration:none;
+ } */
+
+ .nav-link a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s;
+ }
+
+ .nav-link a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.nav-link:hover{
+    background: #fff;
+    color: #162938;
+}
+/* end of navbar */
+/* welcome */
+.magret{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+}
+span {
+    color: #ea1538;
+}
+.well{
+    color: #fff;
+}
+.welcometext h3{
+    text-transform: uppercase;
+}
+/* end of welcome */
+    </style>
+    </head>
+    <body>
+    <div class="container">
+
+
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">CAMPUS <span>AID</span></a>
+
+                <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #fff;">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto" style="align-items: center;">
+                        <a class="nav-link" href="./pages/forms/login.html">Admin</a>        
+                        <a class="nav-link " href="#">Home</a>
+                        <a class="nav-link" href="pages/forms/contact.html">Contact</a>        
+                    </div> 
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="magret">
+            <div class="welcometext">
+                <p><span class="well">Welcome to</span> <h3>Campus <span>Aid</span></h3>What do you want to do?</p>  
+            </div>
+        </div>
+  
+<!-- 
+
+    <section>
+        <div class="row">
+        
+        <div class="paulinaContainer">
+        
+            <div class="col-md-3 cards">
+                <a href="forms/">
+                    <img src="img/progChange.svg" alt="change_of_programme" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Change of Programme</h3>
+                        <p>Change from your current programme to your desired</p>
+                    </div>    
+                </a>
+            </div>
+            <div class="col-md-3 cards">
+                <a href="forms/session.php">
+                    <img src="img/session.svg" alt="change_of_session" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Change of Session</h3>
+                        <p>Change your session from either morning or evening to your desired</p>
+                    </div> 
+                </a>   
+            </div>
+            <div class="col-md-3 cards">
+                <a href="forms/complaintform1.html">
+                    <img src="img/complain.svg" alt="complaint" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Complaints</h3>
+                        <p>Having problems concerning your grades? Feel at ease while you submit what issue!</p>
+                    </div> 
+                </a>
+            </div>
+            <div class="cards">
+                <a href="forms/deferment.php">
+                    <img src="img/defer.svg" alt="deferment" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Deferment</h3>
+                        <p>A programme proving too difficult or not interested? Feel free to defer.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards">
+                <a href="forms/resit.php">
+                    <img src="img/resit.svg" alt="resit" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Resit</h3>
+                        <p>Want to take an exam again? Want a better grade?.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="cards">
+                <a href="forms/requests.php">
+                    <img src="img/request.svg" alt="requests" style="width: 100%;">
+                    <div class="specifics">
+                        <h3>Requests</h3>
+                        <p>A request you want to make? Get right into it.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    </section> -->
+
+  
+    <div class="row">
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/ChangeProgramme.html">
+                <img src="./sources/imgs/progChange.svg" alt="change_of_programme" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Change of Programme</h3>
+                    <p>Change from your current programme to your desired</p>
+                </div>    
+            </a>
+        </div></div>
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/ChangeSession.html">
+                <img src="./sources/imgs/session.svg" alt="change_of_session" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Change of Session</h3>
+                    <p>Change your session from either morning or evening to your desired</p>
+                </div> 
+            </a>
+        </div></div>
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/complaintform1.html">
+                <img src="./sources/imgs/complain.svg" alt="complaint" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Complaints</h3>
+                    <p>Having problems concerning your grades? Feel at ease while you submit what issue!</p>
+                </div> 
+            </a>
+        </div></div>
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/DeferForm.html">
+                <img src="./sources/imgs/defer.svg" alt="deferment" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Deferment</h3>
+                    <p>A programme proving too difficult or not interested? Feel free to defer.</p>
+                </div>
+            </a>
+        </div></div>
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/ResitForm.html">
+                <img src="./sources/imgs/resit.svg" alt="resit" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Resit</h3>
+                    <p>Want to take an exam again? Want a better grade?.</p>
+                </div>
+            </a>
+        </div></div>
+        <div class="col-sm-4"><div class="cards">
+            <a href="pages/forms/RequestForm.html">
+                <img src="./sources/imgs/request.svg" alt="requests" style="width: 100%;">
+                <div class="specifics">
+                    <h3>Requests</h3>
+                    <p>A request you want to make? Get right into it.</p>
+                </div>
+            </a>
+        </div></div>
+      </div>
+
+        
+</div>
+
+
+<footer class="footer-02">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-6">
+                <div class="subscribe mb-5">
+                    <form action="#" class="subscribe-form">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+          <input type="submit" value="Subscribe" class="form-control submit px-3" >
+        </div>
+      </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-5">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
+                        <h2 class="footer-heading"><a href="#" class="logo">Campus Aid</a></h2>
+                        <p>A platform to help students in sections of things they find difficulty in doing. Easy to use.</p>
+                        <a href="#">read more <span class="ion-ios-arrow-round-forward"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-7">
+                <div class="row">
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h2 class="footer-heading">Discover</h2>
+                        <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Buy &amp; Sell</a></li>
+              <li><a href="#" class="py-1 d-block">Merchant</a></li>
+              <li><a href="#" class="py-1 d-block">Giving back</a></li>
+              <li><a href="#" class="py-1 d-block">Help &amp; Support</a></li>
+            </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h2 class="footer-heading">About</h2>
+                        <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Staff</a></li>
+              <li><a href="#" class="py-1 d-block">Team</a></li>
+              <li><a href="#" class="py-1 d-block">Careers</a></li>
+              <li><a href="#" class="py-1 d-block">Blog</a></li>
+            </ul>
+                    </div>
+                    <!-- <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h2 class="footer-heading">Resources</h2>
+                        <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Security</a></li>
+              <li><a href="#" class="py-1 d-block">Global</a></li>
+              <li><a href="#" class="py-1 d-block">Charts</a></li>
+              <li><a href="#" class="py-1 d-block">Privacy</a></li>
+            </ul>
+                    </div> -->
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h2 class="footer-heading">Social</h2>
+                        <ul class="list-unstyled">
+              <li><a href="https://web.facebook.com/centraledugh/?_rdc=1&_rdr" target="_blank" class="py-1 d-block"><i class="fa-brands fa-facebook fa-spin" style="color: #3b5998;"></i></a></li>
+              <li><a href="https://twitter.com/centralunivgh?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="py-1 d-block"><i class="fa-brands fa-twitter fa-bounce" style="color: #00acee;"></i></a></li>
+              <li><a href="https://www.instagram.com/centralunivgh/?hl=en" target="_blank" class="py-1 d-block"><i class="fa-brands fa-instagram fa-beat" style="background: #d6249f;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                box-shadow: 0px 3px 10px rgba(0,0,0,.25);"></i></a></li>
+              <!-- <li><a href="#" class="py-1 d-block">Googleplus</a></li> -->
+            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row partner-wrap mt-5">
+            <div class="col-md-12">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h3 class="mb-0">Our Partner:</h3>
+                    </div>
+                    <div class="col-md-9">
+                        <p class="partner-name mb-0">
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 01</a>
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 02</a>
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 03</a>
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 04</a>
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 05</a>
+                            <a href="#"><span class="ion-logo-ionic mr-2"></span>Company 06</a>
+                        </p>
+                    </div>
+                    <div class="col text-md-right">
+                        <p class="mb-0"><a href="#" class="btn-custom">See All <span class="ion-ios-arrow-round-forward"></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row mt-5">
+  <div class="col">
+
+    <p class="copyright" style="text-align: center;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |
+ <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="" target="">Genghis</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  </div>
+  <!-- <div class="col-md-6 col-lg-4 text-md-right">
+      <p class="mb-0 list-unstyled">
+          <a class="mr-md-3" href="#">Terms</a>
+          <a class="mr-md-3" href="#">Privacy</a>
+          <a class="mr-md-3" href="#">Compliances</a>
+      </p>
+  </div> -->
+</div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".cards"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+    </script>
+  </body>
+</html>

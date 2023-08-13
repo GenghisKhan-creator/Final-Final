@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/ContactUs.css">
+    
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <span class="magret">
+            <h1>CONTACT US</h1>
+            <p>Your contributions and questions are Welcome</p>
+        </span>
+        
+        <!-- add route here -->
+        <form action="/api/contact" method="POST">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Fullname">Full Name</label>
+                    <input type="text" id="Name" name="fullName" placeholder="Please Enter Your Full Name" required name="Fullname">
+                </div>
+            </div>
+            <div class="main-user-info">
+                <div class="user-input-box" data-validate="Valod email is required: example@mail.qxr">
+                    <label for="email">Email</label>
+                    <input type="text" id="Email" name="email" placeholder="Please Enter Your Email" required name="Email">
+                </div>
+            </div>
+            <div class="main-user-info">
+                <!-- <div class="user-input-box">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Please Enter Your Phone Number">
+                </div> -->
+            </div>
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="Message">Message</label>
+                    <textarea name="message" id="" rows="10" placeholder="What can we help you with?" required></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
